@@ -1,0 +1,6 @@
+.venv/
+_bmad/
+_bmad-output/
+.agent
+.env
+.agent_cache
