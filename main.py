@@ -3,6 +3,9 @@ from pydantic import BaseModel
 from app.core.config import settings
 from app.core.database import db
 from app.api.v1.search import router as search_router
+from app.api.v1.benchmark import router as benchmark_router
+from app.api.v1.analytics import router as analytics_router
+from app.api.v1.report import router as report_router
 from app.api.middleware import LoggingMiddleware
 import logging
 from contextlib import asynccontextmanager
@@ -35,6 +38,9 @@ app = FastAPI(
 
 app.add_middleware(LoggingMiddleware)
 app.include_router(search_router, prefix="/api/v1")
+app.include_router(benchmark_router, prefix="/api/v1/benchmark", tags=["Benchmark"])
+app.include_router(analytics_router, prefix="/api/v1/analytics", tags=["Analytics"])
+app.include_router(report_router, prefix="/api/v1/report", tags=["Report"])
 
 class StatusResponse(BaseModel):
     status: str

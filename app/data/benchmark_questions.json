@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {"id": 1, "query": "Google đã phát triển những công nghệ AI nào?", "category": "Simple"},
+    {"id": 2, "query": "AI Agent là gì và nó có vai trò gì trong hệ sinh thái của Microsoft?", "category": "Simple"},
+    {"id": 3, "query": "Tesla sử dụng công nghệ gì cho hệ thống tự lái (FSD) của mình?", "category": "Simple"},
+    {"id": 4, "query": "NVIDIA đóng vai trò gì trong sự bùng nổ của trí tuệ nhân tạo hiện nay?", "category": "Simple"},
+    {"id": 5, "query": "Apple đã ra mắt sản phẩm nào liên quan đến AI vào năm 2024?", "category": "Simple"},
+    {"id": 6, "query": "OpenAI được sáng lập bởi những ai và mục tiêu ban đầu là gì?", "category": "Simple"},
+    {"id": 7, "query": "So sánh chiến lược phát triển AI của Google và Microsoft.", "category": "Comparison"},
+    {"id": 8, "query": "Sự khác biệt giữa mô hình GPT-4o của OpenAI và Gemini 1.5 của Google là gì?", "category": "Comparison"},
+    {"id": 9, "query": "Công nghệ tự lái của Tesla khác gì so với Waymo của Google?", "category": "Comparison"},
+    {"id": 10, "query": "Tại sao NVIDIA lại trở thành đối tác quan trọng của cả Microsoft và OpenAI?", "category": "Comparison"},
+    {"id": 11, "query": "Apple Intelligence có những điểm gì khác biệt so với các giải pháp AI của đối thủ?", "category": "Comparison"},
+    {"id": 12, "query": "So sánh ảnh hưởng của Satya Nadella (Microsoft) và Sundar Pichai (Google) trong kỷ nguyên AI.", "category": "Comparison"},
+    {"id": 13, "query": "Những công ty nào đang sử dụng công nghệ do OpenAI phát triển và mối quan hệ của họ là gì?", "category": "Multi-hop"},
+    {"id": 14, "query": "Có mối liên kết nào giữa Elon Musk, OpenAI và Microsoft không? Hãy giải thích quy trình.", "category": "Multi-hop"},
+    {"id": 15, "query": "Những công ty nào là đối thủ cạnh tranh trực tiếp của NVIDIA trong mảng chip AI và họ đang hợp tác với ai?", "category": "Multi-hop"},
+    {"id": 16, "query": "Nếu một công ty đầu tư vào OpenAI, họ có khả năng tiếp cận với những công nghệ nào của Microsoft?", "category": "Multi-hop"},
+    {"id": 17, "query": "Tìm các thực thể (người hoặc công ty) có liên quan đến cả Google và Tesla thông qua các công nghệ AI.", "category": "Multi-hop"},
+    {"id": 18, "query": "Phân tích mạng lưới đối tác của Microsoft trong việc triển khai Azure AI.", "category": "Multi-hop"},
+    {"id": 19, "query": "Những nhà sáng lập nào của OpenAI đã rời đi để thành lập các công ty AI đối thủ?", "category": "Multi-hop"},
+    {"id": 20, "query": "Mối quan hệ giữa các framework mã nguồn mở (như PyTorch/TensorFlow) và sự thống trị thị trường của các Big Tech hiện nay.", "category": "Multi-hop"}
+  ]
+}
