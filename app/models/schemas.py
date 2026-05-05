@@ -32,3 +32,18 @@ class Relationship(BaseModel):
 class ExtractionResult(BaseModel):
     entities: List[Entity] = Field(default_factory=list)
     relationships: List[Relationship] = Field(default_factory=list)
+
+class SearchMeta(BaseModel):
+    tokens: Dict[str, int] = Field(default_factory=dict)
+    latency_ms: float = 0.0
+
+class QueryRequest(BaseModel):
+    query: str = Field(..., description="The user's natural language question")
+    method: str = Field("vector", description="Retrieval method: 'vector' hoặc 'hybrid'")
+    top_k: int = Field(5, description="Số lượng đoạn văn bản lấy ra làm ngữ cảnh")
+
+class QueryResponse(BaseModel):
+    status: str = "success"
+    answer: str = Field(..., description="Câu trả lời tự nhiên từ LLM")
+    context: List[str] = Field(default_factory=list, description="Các đoạn văn bản được sử dụng làm ngữ cảnh")
+    meta: SearchMeta = Field(..., description="Thông tin về token usage và latency")

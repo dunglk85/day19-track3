@@ -141,5 +141,20 @@ class Neo4jRepository:
             logger.error(f"Failed to save chunk transactionally: {str(e)}")
             raise e
 
+    def vector_search(self, index_name: str, query_vector: List[float], top_k: int = 5) -> List[Dict[str, Any]]:
+        """Performs a vector search on Neo4j."""
+        query = f"""
+        CALL db.index.vector.queryNodes($index_name, $top_k, $query_vector)
+        YIELD node, score
+        RETURN node.text AS text, score, node.source_file AS source
+        """
+        try:
+            with self.driver.session() as session:
+                result = session.run(query, index_name=index_name, top_k=top_k, query_vector=query_vector)
+                return [record.data() for record in result]
+        except Exception as e:
+            logger.error(f"Vector search failed: {str(e)}")
+            raise e
+
 # Singleton instance
 neo4j_repo = Neo4jRepository()
