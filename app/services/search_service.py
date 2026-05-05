@@ -8,6 +8,8 @@ from app.services.metrics_service import metrics_tracker
 from app.models.schemas import QueryRequest, QueryResponse, SearchMeta
 import time
 from tenacity import retry, stop_after_attempt, wait_exponential
+from neo4j_graphrag.retrievers import VectorCypherRetriever
+from neo4j_graphrag.embeddings.openai import OpenAIEmbeddings
 
 logger = logging.getLogger(__name__)
 
@@ -18,6 +20,26 @@ class SearchService:
         self.client = OpenAI(api_key=settings.OPENAI_API_KEY)
         self.gen_model = settings.MODEL_NAME_QUERY
         self.vector_index_name = "chunk_vector_index"
+        
+        # Graph Retrieval Configuration
+        self.embedder = OpenAIEmbeddings(model=settings.EMBEDDING_MODEL)
+        self.retrieval_query = """
+        MATCH (node)-[:MENTIONS]->(e)
+        OPTIONAL MATCH (e)-[r]-(neighbor)
+        RETURN e.name as entity, labels(e)[0] as type, type(r) as relationship, neighbor.name as connected_to, node.text as context
+        """
+        self._graph_retriever = None
+
+    @property
+    def graph_retriever(self):
+        if self._graph_retriever is None:
+            self._graph_retriever = VectorCypherRetriever(
+                driver=self.repo.driver,
+                index_name=self.vector_index_name,
+                embedder=self.embedder,
+                retrieval_query=self.retrieval_query
+            )
+        return self._graph_retriever
 
     async def perform_vector_search(self, request: QueryRequest) -> QueryResponse:
         """Performs a standard Vector-only RAG search."""
@@ -96,6 +118,54 @@ Ngữ cảnh:
             context=context_chunks,
             meta=meta
         )
+
+    async def perform_graph_search(self, request: QueryRequest) -> QueryResponse:
+        """
+        Performs a multi-hop Graph retrieval using VectorCypherRetriever.
+        Focuses on fetching structural relationship context.
+        """
+        start_time = time.perf_counter()
+        
+        with metrics_tracker.track("graph_retrieval", model_name="neo4j-graphrag") as metrics:
+            try:
+                # Limit top_k to prevent DB overload
+                safe_top_k = min(request.top_k, 20)
+                
+                # search() is synchronous in current neo4j-graphrag
+                search_results = self.graph_retriever.search(
+                    query_text=request.query,
+                    top_k=safe_top_k
+                )
+            except Exception as e:
+                logger.error(f"Graph retrieval failed: {str(e)}")
+                raise e
+
+        # Format graph context into readable facts
+        graph_facts = []
+        for item in search_results.items:
+            # content is the string representation of the Cypher return record
+            if item.content:
+                graph_facts.append(item.content)
+            
+        if not graph_facts:
+            return QueryResponse(
+                answer="Không tìm thấy thông tin liên quan trong đồ thị tri thức để trả lời câu hỏi này.",
+                context=[],
+                meta=SearchMeta(tokens={"total": 0, "prompt": 0, "completion": 0}, latency_ms=round((time.perf_counter() - start_time) * 1000, 2))
+            )
+            
+        context_text = "\n".join(graph_facts)
+        
+        prompt = f"""Bạn là một trợ lý AI thông minh. Hãy trả lời câu hỏi dựa trên các MỐI QUAN HỆ ĐỒ THỊ được cung cấp dưới đây.
+Dữ liệu đồ thị giúp bạn hiểu các kết nối đa bước giữa các thực thể.
+
+Ngữ cảnh đồ thị:
+{context_text}
+
+Câu hỏi: {request.query}
+Trả lời:"""
+
+        return await self._generate_answer_with_retry(prompt, request.query, graph_facts, start_time)
 
 # Singleton instance
 search_service = SearchService()
