@@ -1,5 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from app.services.report_service import report_service
+from app.core.config import settings
 import logging
 
 router = APIRouter()
@@ -22,7 +23,7 @@ async def export_latest_report():
     Automatically finds the latest benchmark result and generates the final report.
     """
     import os
-    results_dir = "_bmad-output/benchmark-results"
+    results_dir = settings.BENCHMARK_RESULTS_DIR
     if not os.path.exists(results_dir):
         raise HTTPException(status_code=404, detail="No benchmark results found")
     

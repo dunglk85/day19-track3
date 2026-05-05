@@ -2,6 +2,9 @@
 
 Hệ thống RAG (Retrieval-Augmented Generation) tiên tiến kết hợp giữa tìm kiếm Vector truyền thống và Đồ thị tri thức (Knowledge Graph) để cung cấp câu trả lời chính xác, có ngữ cảnh sâu về các công ty công nghệ.
 
+> [!IMPORTANT]
+> **Dành cho Instructor**: Toàn bộ sản phẩm bàn giao (Deliverables) bao gồm mã nguồn, ảnh đồ thị, bảng benchmark và phân tích chi phí được tổ chức tại thư mục [**`submissions/`**](./submissions/). Xem chi tiết tại [SUBMISSION_GUIDE.md](./SUBMISSION_GUIDE.md).
+
 ## 🌟 Tính năng nổi bật
 
 - **Hybrid Search Engine**: Kết hợp sức mạnh của Semantic Search (Vector) và Structural Traversal (Graph) để trả lời các câu hỏi phức tạp.
@@ -84,7 +87,7 @@ Gửi yêu cầu đến `/api/v1/search/query`:
 2. **Xem phân tích chi phí**: `GET /api/v1/analytics/latest`
 3. **Xuất báo cáo cuối cùng**: `POST /api/v1/report/export-latest`
 
-Báo cáo sẽ được lưu tại: `reports/final_report_*.md`
+Báo cáo sẽ được lưu tại: `submissions/reports/final_report_*.md`
 
 ## 🧪 Kiểm thử (Testing)
 Chạy toàn bộ bộ test để đảm bảo hệ thống ổn định:
@@ -97,7 +100,7 @@ pytest
 - `app/services/`: Logic nghiệp vụ (Search, Indexing, Analytics, Report).
 - `app/core/`: Cấu hình hệ thống và kết nối Database.
 - `app/models/`: Pydantic schemas và Ontology.
-- `_bmad-output/`: Kết quả benchmark và báo cáo.
+- `submissions/`: Kết quả benchmark và báo cáo nộp bài.
 
 ---
 **Dự án được phát triển bởi Antigravity AI Assistant.** 🚀

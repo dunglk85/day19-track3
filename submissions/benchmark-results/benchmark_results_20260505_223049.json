@@ -1,0 +1,306 @@
+{
+  "timestamp": "20260505_223049",
+  "total_questions": 20,
+  "completed_questions": 13,
+  "results": [
+    {
+      "id": 1,
+      "category": "Simple",
+      "query": "Google đã phát triển những công nghệ AI nào?",
+      "vector": {
+        "answer": "Google đã phát triển nhiều công nghệ AI, bao gồm mô hình AI Gemini, được tích hợp vào các sản phẩm như Search, Gmail và Google Cloud. Ngoài ra, Google cũng cung cấp Google Cloud Platform (GCP) với các công cụ và hạ tầng cho các nhà phát triển xây dựng ứng dụng AI. Công ty cũng nổi bật trong nghiên cứu AI thông qua bộ phận Google DeepMind.",
+        "latency_ms": 5040.13,
+        "tokens": {
+          "prompt": 914,
+          "completion": 83,
+          "total": 997
+        }
+      },
+      "hybrid": {
+        "answer": "Google đã phát triển nhiều công nghệ AI đáng chú ý, bao gồm:\n\n1. **Gemini**: Đây là mô hình AI chủ lực của Google, cạnh tranh trực tiếp với GPT-4 của OpenAI. Gemini được tích hợp vào nhiều sản phẩm của Google, bao gồm Search, Gmail và Google Cloud.\n\n2. **AI Overviews**: Một tính năng mới được công bố tại Google I/O vào tháng 5 năm 2024, sử dụng AI sinh sinh để tóm tắt các chủ đề phức tạp trong tìm kiếm.\n\n3. **Tensor Processing Unit (TPU)**: Đây là phần cứng được thiết kế đặc biệt cho các tác vụ học máy, giúp tăng cường hiệu suất cho các ứng dụng AI.\n\n4. **Google Cloud Platform (GCP)**: Cung cấp cơ sở hạ tầng và công cụ cho các nhà phát triển xây dựng ứng dụng AI, cạnh tranh với Amazon Web Services (AWS) và Microsoft Azure.\n\n5. **Android**: Hệ điều hành di động phát triển bởi Google, tích hợp nhiều công nghệ AI để cải thiện trải nghiệm người dùng.\n\n6. **YouTube**: Nền tảng chia sẻ video lớn nhất thế giới, sử dụng AI để cải thiện việc gợi ý nội dung và quản lý nội dung.\n\n7. **Chrome**: Trình duyệt web phát triển bởi Google, cũng tích hợp các công nghệ AI để tối ưu hóa hiệu suất và bảo mật.\n\nNhững công nghệ này cho thấy Google đang dẫn đầu trong nghiên cứu và phát triển AI, với mục tiêu tổ chức thông tin toàn cầu và làm cho nó trở nên hữu ích cho mọi người.",
+        "latency_ms": 22080.17,
+        "tokens": {
+          "prompt": 44628,
+          "completion": 340,
+          "total": 44968
+        }
+      }
+    },
+    {
+      "id": 2,
+      "category": "Simple",
+      "query": "AI Agent là gì và nó có vai trò gì trong hệ sinh thái của Microsoft?",
+      "vector": {
+        "answer": "Tôi không biết.",
+        "latency_ms": 1322.68,
+        "tokens": {
+          "prompt": 949,
+          "completion": 5,
+          "total": 954
+        }
+      },
+      "hybrid": {
+        "answer": "AI Agent, trong ngữ cảnh của Microsoft, thường được hiểu là một phần mềm hoặc hệ thống trí tuệ nhân tạo có khả năng tự động hóa các tác vụ, tương tác với người dùng và thực hiện các nhiệm vụ phức tạp mà không cần sự can thiệp của con người. Một ví dụ điển hình là Copilot, trợ lý AI của Microsoft, được tích hợp vào các sản phẩm như Windows 11, Microsoft 365 và GitHub. Copilot sử dụng các mô hình GPT của OpenAI để cung cấp hỗ trợ thông minh cho người dùng, giúp họ hoàn thành công việc hiệu quả hơn.\n\nTrong hệ sinh thái của Microsoft, AI Agent đóng vai trò quan trọng trong việc nâng cao trải nghiệm người dùng và tối ưu hóa quy trình làm việc. Dưới đây là một số vai trò chính của AI Agent trong hệ sinh thái của Microsoft:\n\n1. **Tự động hóa quy trình**: AI Agent giúp tự động hóa các tác vụ lặp đi lặp lại, giảm thiểu thời gian và công sức mà người dùng cần bỏ ra.\n\n2. **Hỗ trợ quyết định**: Thông qua việc phân tích dữ liệu và cung cấp thông tin chi tiết, AI Agent hỗ trợ người dùng trong việc đưa ra quyết định nhanh chóng và chính xác hơn.\n\n3. **Tương tác thông minh**: AI Agent có khả năng tương tác tự nhiên với người dùng, giúp họ dễ dàng truy cập thông tin và thực hiện các tác vụ mà không cần phải tìm kiếm nhiều.\n\n4. **Tích hợp với các dịch vụ khác**: AI Agent như Copilot được tích hợp sâu vào các sản phẩm của Microsoft, từ Office đến Azure, tạo ra một hệ sinh thái liền mạch và đồng bộ.\n\n5. **Cải thiện hiệu suất làm việc**: Bằng cách cung cấp hỗ trợ thông minh và tự động hóa, AI Agent giúp người dùng làm việc hiệu quả hơn, từ đó nâng cao năng suất tổng thể.\n\nTóm lại, AI Agent là một phần không thể thiếu trong chiến lược của Microsoft nhằm phát triển các sản phẩm và dịch vụ thông minh, đồng thời tạo ra giá trị gia tăng cho người dùng trong môi trường làm việc hiện đại.",
+        "latency_ms": 26515.31,
+        "tokens": {
+          "prompt": 44523,
+          "completion": 454,
+          "total": 44977
+        }
+      }
+    },
+    {
+      "id": 3,
+      "category": "Simple",
+      "query": "Tesla sử dụng công nghệ gì cho hệ thống tự lái (FSD) của mình?",
+      "vector": {
+        "answer": "Tôi không biết.",
+        "latency_ms": 1014.21,
+        "tokens": {
+          "prompt": 923,
+          "completion": 5,
+          "total": 928
+        }
+      },
+      "hybrid": {
+        "answer": "Tesla sử dụng công nghệ trí tuệ nhân tạo (AI) và học sâu (deep learning) cho hệ thống tự lái của mình, được gọi là Full Self-Driving (FSD). Hệ thống này dựa vào một mạng nơ-ron sâu để xử lý dữ liệu từ các cảm biến và camera trên xe, cho phép nó nhận diện môi trường xung quanh, bao gồm các phương tiện khác, người đi bộ, và các tín hiệu giao thông. Tesla cũng phát triển phần mềm và thuật toán riêng để cải thiện khả năng tự lái của xe, đồng thời thu thập dữ liệu từ hàng triệu xe trên đường để liên tục cải thiện và cập nhật hệ thống.",
+        "latency_ms": 8388.69,
+        "tokens": {
+          "prompt": 46327,
+          "completion": 142,
+          "total": 46469
+        }
+      }
+    },
+    {
+      "id": 4,
+      "category": "Simple",
+      "query": "NVIDIA đóng vai trò gì trong sự bùng nổ của trí tuệ nhân tạo hiện nay?",
+      "vector": {
+        "answer": "Tôi không biết.",
+        "latency_ms": 1184.57,
+        "tokens": {
+          "prompt": 924,
+          "completion": 5,
+          "total": 929
+        }
+      },
+      "hybrid": {
+        "answer": "NVIDIA đóng vai trò quan trọng trong sự bùng nổ của trí tuệ nhân tạo hiện nay thông qua việc cung cấp phần cứng mạnh mẽ, đặc biệt là các GPU (Graphics Processing Units) và các chip chuyên dụng như Tensor Processing Units (TPUs). Các sản phẩm này được thiết kế để xử lý các tác vụ machine learning và deep learning một cách hiệu quả, giúp tăng tốc độ và hiệu suất của các mô hình AI.\n\nTuy nhiên, NVIDIA cũng đang phải đối mặt với sự cạnh tranh từ các công ty như Microsoft, mà hiện đang phát triển các chip AI tùy chỉnh của riêng mình, chẳng hạn như Azure Maia AI Accelerator, nhằm giảm sự phụ thuộc vào NVIDIA. Điều này cho thấy rằng trong bối cảnh cạnh tranh ngày càng gia tăng trong lĩnh vực AI, NVIDIA cần phải duy trì và cải thiện công nghệ của mình để giữ vững vị thế dẫn đầu trong ngành công nghiệp này. \n\nNgoài ra, NVIDIA cũng là một trong những nhà cung cấp chính cho các công ty công nghệ lớn như Microsoft và Google, những công ty đang đầu tư mạnh mẽ vào AI và phát triển các sản phẩm AI tiên tiến. Sự phát triển của AI hiện nay không thể tách rời khỏi sự hỗ trợ của phần cứng mạnh mẽ mà NVIDIA cung cấp.",
+        "latency_ms": 15385.47,
+        "tokens": {
+          "prompt": 44784,
+          "completion": 268,
+          "total": 45052
+        }
+      }
+    },
+    {
+      "id": 5,
+      "category": "Simple",
+      "query": "Apple đã ra mắt sản phẩm nào liên quan đến AI vào năm 2024?",
+      "vector": {
+        "answer": "Tôi không biết.",
+        "latency_ms": 1220.5,
+        "tokens": {
+          "prompt": 920,
+          "completion": 5,
+          "total": 925
+        }
+      },
+      "hybrid": {
+        "answer": "Dựa trên các nguồn thông tin hiện có, không có thông tin nào đề cập đến việc Apple đã ra mắt sản phẩm nào liên quan đến AI vào năm 2024. Các thông tin chủ yếu tập trung vào Microsoft và OpenAI, cùng với các sản phẩm và phát triển của họ trong lĩnh vực AI.",
+        "latency_ms": 7093.42,
+        "tokens": {
+          "prompt": 46324,
+          "completion": 64,
+          "total": 46388
+        }
+      }
+    },
+    {
+      "id": 6,
+      "category": "Simple",
+      "query": "OpenAI được sáng lập bởi những ai và mục tiêu ban đầu là gì?",
+      "vector": {
+        "answer": "OpenAI được sáng lập bởi Sam Altman, Elon Musk, Ilya Sutskever, Greg Brockman, Trevor Blackwell, Vicki Cheung, Andrej Karpathy, Durk Kingma, Jessica Livingston, John Schulman, Pamela Vagata, và Wojciech Zaremba. Mục tiêu ban đầu của OpenAI là đảm bảo rằng trí tuệ nhân tạo tổng quát (AGI) mang lại lợi ích cho toàn nhân loại.",
+        "latency_ms": 4913.19,
+        "tokens": {
+          "prompt": 948,
+          "completion": 95,
+          "total": 1043
+        }
+      },
+      "hybrid": {
+        "answer": "OpenAI được sáng lập bởi một nhóm các cá nhân, bao gồm: Sam Altman, Elon Musk, Ilya Sutskever, Greg Brockman, Trevor Blackwell, Vicki Cheung, Andrej Karpathy, Durk Kingma, Jessica Livingston, John Schulman, Pamela Vagata, và Wojciech Zaremba. Mục tiêu ban đầu của OpenAI là đảm bảo rằng trí tuệ nhân tạo tổng quát (AGI) sẽ mang lại lợi ích cho toàn nhân loại.",
+        "latency_ms": 9532.22,
+        "tokens": {
+          "prompt": 46431,
+          "completion": 105,
+          "total": 46536
+        }
+      }
+    },
+    {
+      "id": 7,
+      "category": "Comparison",
+      "query": "So sánh chiến lược phát triển AI của Google và Microsoft.",
+      "vector": {
+        "answer": "Microsoft và Google đều có những chiến lược phát triển AI mạnh mẽ nhưng khác nhau. \n\nMicrosoft tập trung vào việc tích hợp AI vào các sản phẩm của mình như Windows, Microsoft 365 và GitHub thông qua trợ lý AI Copilot, được phát triển dựa trên các mô hình GPT của OpenAI. Họ cũng đang phát triển các chip AI tùy chỉnh như Azure Maia AI Accelerator để giảm sự phụ thuộc vào NVIDIA và đã thành lập một bộ phận mới, Microsoft AI, do Mustafa Suleyman lãnh đạo, tập trung vào các sản phẩm AI cho người tiêu dùng.\n\nTrong khi đó, Google phát triển AI thông qua các sản phẩm như Gemini, mô hình AI chủ lực của họ, được tích hợp vào nhiều dịch vụ như Search, Gmail và Google Cloud. Google cũng đầu tư mạnh vào nghiên cứu AI thông qua Google DeepMind, với mục tiêu tổ chức thông tin và làm cho nó dễ tiếp cận và hữu ích cho mọi người.\n\nTóm lại, Microsoft chủ yếu tập trung vào việc tích hợp AI vào các sản phẩm hiện có và phát triển hạ tầng AI, trong khi Google chú trọng vào nghiên cứu và phát triển các mô hình AI tiên tiến để cải thiện dịch vụ của mình.",
+        "latency_ms": 7540.51,
+        "tokens": {
+          "prompt": 981,
+          "completion": 251,
+          "total": 1232
+        }
+      },
+      "hybrid": {
+        "answer": "Chiến lược phát triển AI của Google và Microsoft có những điểm tương đồng và khác biệt rõ rệt, phản ánh cách tiếp cận của từng công ty trong việc tận dụng công nghệ AI để nâng cao sản phẩm và dịch vụ của mình.\n\n### Microsoft:\n1. **Tích hợp AI vào sản phẩm hiện có**: Microsoft đã tích hợp AI vào các sản phẩm chủ lực như Windows 11, Microsoft 365 và GitHub thông qua AI assistant Copilot, được phát triển dựa trên các mô hình GPT của OpenAI. Điều này cho phép người dùng tận dụng AI để nâng cao năng suất và hiệu quả công việc.\n\n2. **Đầu tư mạnh mẽ vào AI và Cloud**: Microsoft đã chuyển hướng chiến lược mạnh mẽ sang AI và điện toán đám mây dưới sự lãnh đạo của CEO Satya Nadella. Công ty đã đầu tư hàng tỷ đô la vào OpenAI, cung cấp sức mạnh tính toán lớn trên nền tảng Azure để hỗ trợ nghiên cứu và phát triển AI.\n\n3. **Phát triển chip AI riêng**: Microsoft đang phát triển các chip AI tùy chỉnh như Azure Maia AI Accelerator để giảm sự phụ thuộc vào NVIDIA, cho thấy một chiến lược tự chủ trong việc phát triển hạ tầng AI.\n\n4. **Tạo ra các sản phẩm AI tiêu dùng**: Với sự ra mắt của Microsoft AI, do Mustafa Suleyman, một trong những người sáng lập DeepMind, lãnh đạo, Microsoft đang tập trung vào việc phát triển các sản phẩm AI dành cho người tiêu dùng.\n\n### Google:\n1. **Nghiên cứu và phát triển AI tiên tiến**: Google là một trong những công ty dẫn đầu trong nghiên cứu AI thông qua Google DeepMind, nơi đã phát triển các mô hình AI tiên tiến như Gemini, cạnh tranh trực tiếp với GPT-4 của OpenAI. Google sử dụng AI để cải thiện các sản phẩm như Search, Gmail và Google Cloud.\n\n2. **Tích hợp AI vào các dịch vụ cốt lõi**: Google đã công bố \"AI Overviews\" trong tìm kiếm, sử dụng AI sinh để tóm tắt các chủ đề phức tạp, cho thấy cách mà AI được tích hợp vào các dịch vụ cốt lõi của công ty.\n\n3. **Đầu tư vào phần cứng AI**: Google đã đầu tư vào phần cứng AI như Tensor Processing Units (TPUs), được thiết kế đặc biệt cho các khối lượng công việc học máy, cho thấy sự chú trọng vào việc tối ưu hóa hiệu suất AI.\n\n4. **Chiến lược mở rộng và hợp tác**: Google không chỉ phát triển AI cho các sản phẩm của mình mà còn cung cấp hạ tầng cho các nhà phát triển thông qua Google Cloud Platform, cạnh tranh với Microsoft Azure và Amazon Web Services.\n\n### Kết luận:\n- **Tương đồng**: Cả hai công ty đều đầu tư mạnh mẽ vào AI và tích hợp công nghệ này vào sản phẩm của mình để nâng cao trải nghiệm người dùng. Họ cũng đều có các mô hình AI tiên tiến và đang phát triển các sản phẩm AI tiêu dùng.\n- **Khác biệt**: Microsoft tập trung vào việc phát triển các sản phẩm AI tích hợp trong hệ sinh thái của mình và giảm sự phụ thuộc vào các nhà cung cấp bên ngoài thông qua phát triển chip AI riêng. Trong khi đó, Google chú trọng vào nghiên cứu AI tiên tiến và cung cấp hạ tầng cho các nhà phát triển, đồng thời tích hợp AI vào các dịch vụ cốt lõi của mình. \n\nSự khác biệt này phản ánh chiến lược tổng thể của mỗi công ty trong việc định hình tương lai của công nghệ AI.",
+        "latency_ms": 26254.86,
+        "tokens": {
+          "prompt": 42947,
+          "completion": 762,
+          "total": 43709
+        }
+      }
+    },
+    {
+      "id": 8,
+      "category": "Comparison",
+      "query": "Sự khác biệt giữa mô hình GPT-4o của OpenAI và Gemini 1.5 của Google là gì?",
+      "vector": {
+        "answer": "Tôi không biết.",
+        "latency_ms": 1323.34,
+        "tokens": {
+          "prompt": 929,
+          "completion": 5,
+          "total": 934
+        }
+      },
+      "hybrid": {
+        "answer": "Sự khác biệt giữa mô hình GPT-4o của OpenAI và Gemini 1.5 của Google chủ yếu nằm ở các tính năng và khả năng xử lý của chúng:\n\n1. **Khả năng xử lý đa phương tiện**:\n   - **GPT-4o**: Là một mô hình đa phương tiện, có khả năng xử lý văn bản, âm thanh và hình ảnh trong thời gian thực. Điều này cho phép nó thực hiện các tác vụ phức tạp hơn, như tạo ra nội dung từ nhiều loại dữ liệu khác nhau.\n   - **Gemini 1.5**: Mặc dù cũng là một mô hình AI mạnh mẽ, nhưng thông tin cụ thể về khả năng đa phương tiện của Gemini 1.5 không được nêu rõ. Tuy nhiên, Gemini được biết đến là một mô hình cạnh tranh với GPT-4, chủ yếu tập trung vào việc cải thiện khả năng tìm kiếm và tổ chức thông tin.\n\n2. **Tích hợp sản phẩm**:\n   - **GPT-4o**: Được tích hợp vào các sản phẩm của OpenAI, như ChatGPT, và có thể được sử dụng trong các ứng dụng khác nhau thông qua API.\n   - **Gemini 1.5**: Được tích hợp vào nhiều sản phẩm của Google, bao gồm Search, Gmail và Google Cloud, nhằm cải thiện trải nghiệm người dùng và cung cấp thông tin một cách hiệu quả hơn.\n\n3. **Mục tiêu và sứ mệnh**:\n   - **OpenAI**: Mục tiêu của OpenAI là đảm bảo rằng trí tuệ nhân tạo tổng quát (AGI) mang lại lợi ích cho toàn nhân loại. Điều này thể hiện qua việc phát triển các sản phẩm như ChatGPT và GPT-4o.\n   - **Google**: Sứ mệnh của Google là tổ chức thông tin của thế giới và làm cho nó trở nên hữu ích và dễ tiếp cận. Gemini 1.5 được phát triển để hỗ trợ sứ mệnh này thông qua việc cải thiện khả năng tìm kiếm và tổ chức thông tin.\n\nTóm lại, GPT-4o của OpenAI nổi bật với khả năng xử lý đa phương tiện và tích hợp vào các sản phẩm AI của OpenAI, trong khi Gemini 1.5 của Google tập trung vào việc cải thiện trải nghiệm người dùng trong các sản phẩm của Google thông qua khả năng tìm kiếm và tổ chức thông tin.",
+        "latency_ms": 24380.79,
+        "tokens": {
+          "prompt": 46339,
+          "completion": 503,
+          "total": 46842
+        }
+      }
+    },
+    {
+      "id": 9,
+      "category": "Comparison",
+      "query": "Công nghệ tự lái của Tesla khác gì so với Waymo của Google?",
+      "vector": {
+        "answer": "Tôi không biết.",
+        "latency_ms": 1511.81,
+        "tokens": {
+          "prompt": 920,
+          "completion": 5,
+          "total": 925
+        }
+      },
+      "hybrid": {
+        "answer": "Công nghệ tự lái của Tesla và Waymo (thuộc Google) có những điểm khác biệt rõ rệt về cách tiếp cận và công nghệ.\n\n1. **Cách tiếp cận công nghệ**:\n   - **Tesla**: Tesla sử dụng một hệ thống dựa trên camera và cảm biến siêu âm để thu thập dữ liệu từ môi trường xung quanh. Hệ thống này được gọi là \"Full Self-Driving\" (FSD) và sử dụng học máy để cải thiện khả năng tự lái qua việc thu thập dữ liệu từ hàng triệu xe Tesla trên đường. Tesla thường xuyên cập nhật phần mềm qua mạng (over-the-air) để cải thiện tính năng và hiệu suất.\n   - **Waymo**: Waymo, ngược lại, sử dụng một hệ thống phức tạp hơn với sự kết hợp của lidar (cảm biến laser), radar và camera. Hệ thống lidar cho phép Waymo tạo ra bản đồ 3D chi tiết về môi trường xung quanh, giúp xe tự lái nhận diện và phản ứng với các tình huống phức tạp hơn. Waymo tập trung vào việc phát triển công nghệ tự lái hoàn toàn mà không cần sự can thiệp của con người.\n\n2. **Mục tiêu và ứng dụng**:\n   - **Tesla**: Mục tiêu của Tesla là cung cấp công nghệ tự lái cho người tiêu dùng thông qua các sản phẩm thương mại. Hệ thống FSD của Tesla hiện đang trong giai đoạn thử nghiệm và chưa hoàn toàn tự động, yêu cầu người lái vẫn phải chú ý và sẵn sàng can thiệp khi cần thiết.\n   - **Waymo**: Waymo chủ yếu tập trung vào việc phát triển dịch vụ taxi tự lái và vận chuyển hàng hóa. Công ty đã triển khai dịch vụ Waymo One tại một số khu vực nhất định, nơi xe tự lái có thể hoạt động mà không cần người lái.\n\n3. **An toàn và quy định**:\n   - **Tesla**: Tesla đã gặp phải một số chỉ trích về an toàn và cách mà công nghệ tự lái của họ được quảng bá, với nhiều vụ tai nạn liên quan đến việc sử dụng hệ thống FSD.\n   - **Waymo**: Waymo đã thực hiện nhiều thử nghiệm an toàn hơn và có thể được coi là tiên tiến hơn trong việc phát triển công nghệ tự lái hoàn toàn, với nhiều quy định và kiểm tra nghiêm ngặt hơn trước khi triển khai dịch vụ.\n\nTóm lại, trong khi Tesla tập trung vào việc cung cấp công nghệ tự lái cho người tiêu dùng với một hệ thống dựa trên camera, Waymo lại phát triển một hệ thống tự lái hoàn toàn dựa trên lidar và cảm biến khác, với mục tiêu cung cấp dịch vụ vận chuyển tự động.",
+        "latency_ms": 32673.15,
+        "tokens": {
+          "prompt": 44942,
+          "completion": 589,
+          "total": 45531
+        }
+      }
+    },
+    {
+      "id": 10,
+      "category": "Comparison",
+      "query": "Tại sao NVIDIA lại trở thành đối tác quan trọng của cả Microsoft và OpenAI?",
+      "vector": {
+        "answer": "Tôi không biết.",
+        "latency_ms": 1372.47,
+        "tokens": {
+          "prompt": 921,
+          "completion": 5,
+          "total": 926
+        }
+      },
+      "hybrid": {
+        "answer": "NVIDIA trở thành đối tác quan trọng của cả Microsoft và OpenAI vì một số lý do chính sau đây:\n\n1. **Công nghệ GPU mạnh mẽ**: NVIDIA là nhà sản xuất hàng đầu các đơn vị xử lý đồ họa (GPU), mà hiện nay được sử dụng rộng rãi trong các ứng dụng trí tuệ nhân tạo (AI) và học máy. Các GPU của NVIDIA cung cấp sức mạnh tính toán cần thiết để xử lý các mô hình AI phức tạp, bao gồm cả các mô hình như GPT của OpenAI.\n\n2. **Hỗ trợ hạ tầng AI**: Microsoft đã đầu tư mạnh vào hạ tầng AI thông qua nền tảng đám mây Azure. NVIDIA cung cấp các giải pháp phần cứng và phần mềm giúp tối ưu hóa hiệu suất cho các ứng dụng AI trên Azure, từ đó giúp Microsoft cung cấp dịch vụ AI hiệu quả hơn cho khách hàng.\n\n3. **Đối tác chiến lược**: Sự hợp tác giữa NVIDIA, Microsoft và OpenAI không chỉ dừng lại ở việc cung cấp phần cứng. NVIDIA cũng tham gia vào việc phát triển các công nghệ AI mới, giúp cả hai công ty này duy trì vị thế cạnh tranh trong thị trường AI đang phát triển nhanh chóng.\n\n4. **Giảm thiểu sự phụ thuộc**: Microsoft đang phát triển các chip AI tùy chỉnh như Azure Maia AI Accelerator để giảm sự phụ thuộc vào NVIDIA. Tuy nhiên, trong giai đoạn chuyển tiếp này, NVIDIA vẫn là một đối tác quan trọng trong việc cung cấp công nghệ và giải pháp cho các ứng dụng AI.\n\n5. **Cạnh tranh trong thị trường AI**: Cả Microsoft và OpenAI đều đang cạnh tranh với các công ty lớn khác như Google và Amazon trong lĩnh vực AI. Sự hợp tác với NVIDIA giúp họ có được công nghệ tiên tiến và khả năng tính toán cần thiết để phát triển các sản phẩm AI cạnh tranh hơn.\n\nTóm lại, NVIDIA đóng vai trò quan trọng trong việc cung cấp công nghệ và hạ tầng cần thiết cho cả Microsoft và OpenAI trong nỗ lực phát triển và triển khai các giải pháp AI tiên tiến.",
+        "latency_ms": 18622.63,
+        "tokens": {
+          "prompt": 45052,
+          "completion": 442,
+          "total": 45494
+        }
+      }
+    },
+    {
+      "id": 11,
+      "category": "Comparison",
+      "query": "Apple Intelligence có những điểm gì khác biệt so với các giải pháp AI của đối thủ?",
+      "vector": {
+        "answer": "Tôi không biết.",
+        "latency_ms": 1185.62,
+        "tokens": {
+          "prompt": 921,
+          "completion": 5,
+          "total": 926
+        }
+      },
+      "hybrid": {
+        "answer": "Dựa trên thông tin từ hai nguồn ngữ cảnh, Apple Intelligence không được đề cập trực tiếp, nhưng có thể rút ra một số điểm khác biệt giữa các giải pháp AI của Apple và các đối thủ như Microsoft, Google và OpenAI.\n\n1. **Tích hợp sâu vào hệ sinh thái Apple**: Apple Intelligence có thể được tích hợp chặt chẽ vào các sản phẩm và dịch vụ của Apple như iPhone, iPad, Mac và các dịch vụ như Siri, Apple Music và Apple Health. Điều này tạo ra một trải nghiệm người dùng liền mạch và đồng bộ hóa tốt hơn so với các giải pháp AI của đối thủ.\n\n2. **Chú trọng đến quyền riêng tư**: Apple thường nhấn mạnh cam kết của mình đối với quyền riêng tư và bảo mật dữ liệu người dùng. Các giải pháp AI của Apple có thể được thiết kế để xử lý dữ liệu trên thiết bị (on-device processing) thay vì gửi dữ liệu lên đám mây, điều này khác biệt so với nhiều đối thủ như Google và Microsoft, nơi mà dữ liệu thường được xử lý trên máy chủ.\n\n3. **Thiết kế và trải nghiệm người dùng**: Apple nổi tiếng với thiết kế sản phẩm và trải nghiệm người dùng. AI của Apple có thể được tối ưu hóa để cung cấp trải nghiệm người dùng trực quan và dễ sử dụng hơn, điều này có thể khác biệt so với các giải pháp AI phức tạp hơn của các công ty như Google và Microsoft.\n\n4. **Tập trung vào các ứng dụng cụ thể**: Apple có thể phát triển các giải pháp AI cho các ứng dụng cụ thể như nhận diện hình ảnh trong ảnh và video, phân tích sức khỏe trong Apple Watch, hoặc cải thiện trải nghiệm người dùng trong các ứng dụng như Photos và Music, trong khi các đối thủ như OpenAI và Google có thể tập trung vào các mô hình AI tổng quát hơn như GPT-4o hay AI Overviews.\n\n5. **Chiến lược phát triển sản phẩm**: Apple có thể chọn cách tiếp cận từ từ và cẩn thận hơn trong việc phát triển và triển khai AI, trong khi các đối thủ như Microsoft và Google có thể nhanh chóng tung ra các sản phẩm AI mới và cập nhật thường xuyên.\n\nTóm lại, Apple Intelligence có thể khác biệt so với các giải pháp AI của đối thủ thông qua việc tích hợp sâu vào hệ sinh thái sản phẩm, chú trọng đến quyền riêng tư, thiết kế trải nghiệm người dùng, tập trung vào các ứng dụng cụ thể và chiến lược phát triển sản phẩm cẩn thận.",
+        "latency_ms": 23490.28,
+        "tokens": {
+          "prompt": 44781,
+          "completion": 534,
+          "total": 45315
+        }
+      }
+    },
+    {
+      "id": 12,
+      "category": "Comparison",
+      "query": "So sánh ảnh hưởng của Satya Nadella (Microsoft) và Sundar Pichai (Google) trong kỷ nguyên AI.",
+      "vector": {
+        "answer": "Tôi không biết.",
+        "latency_ms": 1324.86,
+        "tokens": {
+          "prompt": 995,
+          "completion": 5,
+          "total": 1000
+        }
+      },
+      "hybrid": {
+        "answer": "Satya Nadella và Sundar Pichai đều là những nhà lãnh đạo quan trọng trong lĩnh vực công nghệ, đặc biệt là trong kỷ nguyên AI, nhưng họ đã có những cách tiếp cận và ảnh hưởng khác nhau đối với sự phát triển của công nghệ này trong các công ty của họ.\n\n### Satya Nadella (Microsoft)\n1. **Chuyển đổi chiến lược**: Dưới sự lãnh đạo của Nadella, Microsoft đã chuyển mình từ một công ty chủ yếu tập trung vào phần mềm sang một công ty công nghệ toàn diện, chú trọng vào AI và điện toán đám mây. Ông đã thúc đẩy sự phát triển của Azure, nền tảng điện toán đám mây của Microsoft, và thiết lập mối quan hệ đối tác chiến lược với OpenAI, cung cấp sức mạnh tính toán lớn cho tổ chức này để đổi lấy quyền truy cập sớm vào các mô hình AI tiên tiến.\n\n2. **Sản phẩm AI**: Microsoft đã phát triển nhiều sản phẩm AI, bao gồm Copilot, một trợ lý AI tích hợp trong Windows 11 và Microsoft 365, sử dụng các mô hình GPT của OpenAI. Điều này cho thấy sự cam kết của Microsoft trong việc tích hợp AI vào các sản phẩm của mình để nâng cao trải nghiệm người dùng.\n\n3. **Đầu tư vào công nghệ**: Nadella đã chỉ đạo Microsoft phát triển các chip AI tùy chỉnh như Azure Maia AI Accelerator, nhằm giảm sự phụ thuộc vào các nhà cung cấp bên ngoài như NVIDIA. Điều này không chỉ giúp Microsoft kiểm soát tốt hơn công nghệ của mình mà còn tạo ra một lợi thế cạnh tranh trong lĩnh vực AI.\n\n### Sundar Pichai (Google)\n1. **Tập trung vào nghiên cứu AI**: Pichai đã dẫn dắt Google trong việc trở thành một trong những công ty hàng đầu trong nghiên cứu AI thông qua Google DeepMind. Dưới sự lãnh đạo của ông, Google đã phát triển các mô hình AI tiên tiến như Gemini, cạnh tranh trực tiếp với các sản phẩm của OpenAI như GPT-4.\n\n2. **Sản phẩm AI tích hợp**: Google đã tích hợp AI vào nhiều sản phẩm của mình, bao gồm Search, Gmail và Google Cloud, giúp cải thiện khả năng tìm kiếm và trải nghiệm người dùng. Sáng kiến \"AI Overviews\" trong Search là một ví dụ điển hình về việc sử dụng AI để tóm tắt các chủ đề phức tạp, làm cho thông tin trở nên dễ tiếp cận hơn.\n\n3. **Đầu tư vào phần cứng**: Google cũng đã đầu tư mạnh vào phần cứng AI, như Tensor Processing Units (TPUs), được thiết kế đặc biệt cho các tác vụ học máy. Điều này cho phép Google tối ưu hóa hiệu suất của các mô hình AI và duy trì vị thế cạnh tranh trong lĩnh vực này.\n\n### So sánh\n- **Chiến lược và Tầm nhìn**: Nadella đã tập trung vào việc chuyển đổi Microsoft thành một công ty AI toàn diện, trong khi Pichai đã củng cố vị thế của Google như một nhà lãnh đạo trong nghiên cứu AI và phát triển sản phẩm.\n- **Sản phẩm và Dịch vụ**: Cả hai công ty đều đã phát triển các sản phẩm AI mạnh mẽ, nhưng Microsoft có xu hướng tích hợp AI vào các sản phẩm hiện có, trong khi Google tập trung vào việc phát triển các mô hình AI mới và cải tiến trải nghiệm người dùng qua các sản phẩm của mình.\n- **Đầu tư vào công nghệ**: Microsoft đang phát triển chip AI riêng để giảm phụ thuộc vào bên ngoài, trong khi Google đầu tư vào phần cứng để tối ưu hóa hiệu suất AI.\n\nTóm lại, cả Satya Nadella và Sundar Pichai đều có ảnh hưởng lớn đến sự phát triển của AI trong các công ty của họ, nhưng với những chiến lược và cách tiếp cận khác nhau, phản ánh tầm nhìn và mục tiêu riêng của mỗi công ty trong kỷ nguyên công nghệ này.",
+        "latency_ms": 34862.25,
+        "tokens": {
+          "prompt": 43983,
+          "completion": 846,
+          "total": 44829
+        }
+      }
+    },
+    {
+      "id": 13,
+      "category": "Multi-hop",
+      "query": "Những công ty nào đang sử dụng công nghệ do OpenAI phát triển và mối quan hệ của họ là gì?",
+      "vector": {
+        "answer": "Microsoft là công ty đang sử dụng công nghệ do OpenAI phát triển. Mối quan hệ của họ là một sự hợp tác chiến lược, trong đó Microsoft cung cấp cho OpenAI sức mạnh tính toán lớn trên nền tảng Azure để đổi lấy quyền truy cập sớm vào các mô hình của OpenAI. AI assistant của Microsoft, Copilot, được hỗ trợ bởi các mô hình GPT của OpenAI và được tích hợp vào Windows 11, Microsoft 365 và GitHub.",
+        "latency_ms": 3835.53,
+        "tokens": {
+          "prompt": 956,
+          "completion": 99,
+          "total": 1055
+        }
+      },
+      "hybrid": {
+        "answer": "Các công ty đang sử dụng công nghệ do OpenAI phát triển và mối quan hệ của họ với OpenAI như sau:\n\n1. **Microsoft**:\n   - **Mối quan hệ**: \n     - **Đối tác**: Microsoft là đối tác chiến lược của OpenAI, cung cấp sức mạnh tính toán lớn trên nền tảng Azure cho OpenAI.\n     - **Đầu tư**: Microsoft đã đầu tư hàng tỷ đô la vào OpenAI để hỗ trợ nghiên cứu và phát triển công nghệ AI.\n     - **Sản phẩm**: Microsoft tích hợp các mô hình GPT của OpenAI vào các sản phẩm của mình như Copilot trong Windows 11, Microsoft 365 và GitHub.\n\n2. **GitHub**:\n   - **Mối quan hệ**: GitHub thuộc sở hữu của Microsoft và sử dụng công nghệ AI từ OpenAI để cải thiện trải nghiệm người dùng và phát triển các tính năng mới.\n\n3. **LinkedIn**:\n   - **Mối quan hệ**: LinkedIn cũng thuộc sở hữu của Microsoft và có thể sử dụng công nghệ AI từ OpenAI để tối ưu hóa các dịch vụ và tính năng của mình.\n\n4. **Xbox**:\n   - **Mối quan hệ**: Xbox, một thương hiệu của Microsoft, có thể sử dụng công nghệ AI từ OpenAI để cải thiện trải nghiệm chơi game và phát triển các tính năng mới.\n\n5. **Google**:\n   - **Mối quan hệ**: Google là đối thủ cạnh tranh của OpenAI và phát triển các sản phẩm AI của riêng mình, nhưng cũng có thể sử dụng công nghệ AI từ OpenAI trong một số lĩnh vực nhất định.\n\n6. **Anthropic**:\n   - **Mối quan hệ**: Anthropic là một công ty cạnh tranh với OpenAI trong lĩnh vực AI, nhưng không rõ ràng về việc họ có sử dụng công nghệ của OpenAI hay không.\n\nTóm lại, Microsoft là công ty chính sử dụng công nghệ của OpenAI, với nhiều sản phẩm và dịch vụ được tích hợp công nghệ AI từ OpenAI. Các công ty khác như GitHub, LinkedIn và Xbox cũng nằm trong hệ sinh thái của Microsoft và có thể sử dụng công nghệ này.",
+        "latency_ms": 25244.75,
+        "tokens": {
+          "prompt": 46321,
+          "completion": 459,
+          "total": 46780
+        }
+      }
+    }
+  ]
+}

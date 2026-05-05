@@ -4,13 +4,14 @@ from datetime import datetime
 from typing import Dict, Any, List
 from app.core.database import db
 from app.services.analytics_service import analytics_service
+from app.core.config import settings
 import logging
 
 logger = logging.getLogger(__name__)
 
 class ReportService:
     def __init__(self):
-        self.reports_dir = "reports"
+        self.reports_dir = settings.REPORTS_DIR
         os.makedirs(self.reports_dir, exist_ok=True)
 
     async def get_graph_mermaid(self, limit: int = 25) -> str:
@@ -23,25 +24,30 @@ class ReportService:
         LIMIT $limit
         """
         try:
-            # db.driver.execute_query is part of the Neo4j Python driver 5.x+
-            records, _, _ = db.driver.execute_query(query, limit=limit)
+            with db.driver.session() as session:
+                result = session.run(query, limit=limit)
+                records = result.data()
             
             mermaid = "graph TD\n"
             added_edges = set()
             for rec in records:
                 # Sanitize names for Mermaid (remove spaces and special chars)
-                source = rec["source"].replace(" ", "_").replace("-", "_").replace(".", "_")
-                target = rec["target"].replace(" ", "_").replace("-", "_").replace(".", "_")
+                source = str(rec["source"]).replace(" ", "_").replace("-", "_").replace(".", "_").replace("\"", "")
+                target = str(rec["target"]).replace(" ", "_").replace("-", "_").replace(".", "_").replace("\"", "")
                 rel = rec["rel"]
                 
                 edge = f"{source}--{rel}-->{target}"
                 if edge not in added_edges:
                     mermaid += f"    {source} -- {rel} --> {target}\n"
                     added_edges.add(edge)
+            
+            if not added_edges:
+                return "graph TD\n    No_Data -- In_Database --> Graph"
+                
             return mermaid
         except Exception as e:
             logger.error(f"Failed to extract graph for Mermaid: {str(e)}")
-            return "graph TD\n    Error -- Failed_to_load --> Graph"
+            return f"graph TD\n    Error -- {str(e).replace(' ', '_')} --> Graph"
 
     async def generate_final_report(self, benchmark_file: str) -> str:
         """

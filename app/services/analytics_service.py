@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 class AnalyticsService:
     def __init__(self):
-        self.results_dir = "_bmad-output/benchmark-results"
+        self.results_dir = settings.BENCHMARK_RESULTS_DIR
 
     def calculate_cost(self, tokens: Dict[str, int], model: str = "gpt-4o-mini") -> float:
         if model not in settings.PRICING:

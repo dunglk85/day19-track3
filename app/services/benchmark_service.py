@@ -6,6 +6,7 @@ from datetime import datetime
 from typing import List, Dict, Any
 from app.services.search_service import search_service
 from app.models.schemas import QueryRequest
+from app.core.config import settings
 import logging
 
 logger = logging.getLogger(__name__)
@@ -13,7 +14,7 @@ logger = logging.getLogger(__name__)
 class BenchmarkService:
     def __init__(self):
         self.questions_path = "app/data/benchmark_questions.json"
-        self.results_dir = "_bmad-output/benchmark-results"
+        self.results_dir = settings.BENCHMARK_RESULTS_DIR
         os.makedirs(self.results_dir, exist_ok=True)
 
     def load_questions(self) -> List[Dict[str, Any]]:

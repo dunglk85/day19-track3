@@ -32,6 +32,10 @@ class Settings(BaseSettings):
     CHUNK_SIZE: int = 1000
     CHUNK_OVERLAP: int = 100
 
+    # Storage Paths
+    BENCHMARK_RESULTS_DIR: str = "submissions/benchmark-results"
+    REPORTS_DIR: str = "submissions/reports"
+
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 settings = Settings()
