@@ -22,6 +22,12 @@ class Settings(BaseSettings):
     MODEL_NAME_QUERY: str = "gpt-4o-mini"
     EMBEDDING_MODEL: str = "text-embedding-3-large"
 
+    # Pricing per 1M tokens (USD)
+    PRICING: dict = {
+        "gpt-4o": {"input": 5.00, "output": 15.00},
+        "gpt-4o-mini": {"input": 0.15, "output": 0.60}
+    }
+
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 settings = Settings()

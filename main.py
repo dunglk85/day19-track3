@@ -2,6 +2,7 @@ from fastapi import FastAPI, status, Response
 from pydantic import BaseModel
 from app.core.config import settings
 from app.core.database import db
+from app.api.middleware import LoggingMiddleware
 import logging
 from contextlib import asynccontextmanager
 
@@ -30,6 +31,8 @@ app = FastAPI(
     version=settings.APP_VERSION,
     lifespan=lifespan
 )
+
+app.add_middleware(LoggingMiddleware)
 
 class StatusResponse(BaseModel):
     status: str
