@@ -28,6 +28,10 @@ class Settings(BaseSettings):
         "gpt-4o-mini": {"input": 0.15, "output": 0.60}
     }
 
+    # Chunking Configuration
+    CHUNK_SIZE: int = 1000
+    CHUNK_OVERLAP: int = 100
+
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 settings = Settings()

@@ -1,0 +1,12 @@
+OpenAI is an American artificial intelligence (AI) research organization founded in December 2015. 
+The organization was founded by Sam Altman, Elon Musk, Ilya Sutskever, Greg Brockman, Trevor Blackwell, Vicki Cheung, Andrej Karpathy, Durk Kingma, Jessica Livingston, John Schulman, Pamela Vagata, and Wojciech Zaremba.
+Sam Altman currently serves as the CEO of OpenAI.
+OpenAI's mission is to ensure that artificial general intelligence (AGI) benefits all of humanity. 
+One of its most famous products is ChatGPT, a conversational AI model launched in November 2022. 
+OpenAI has a strong partnership with Microsoft, which has invested billions of dollars into the organization to power its Azure AI infrastructure.
+The company transitioned from a non-profit to a "capped-profit" model in 2019 to attract more capital for its compute-intensive research.
+OpenAI's headquarters are located in San Francisco, California.
+In 2024, OpenAI released GPT-4o, a multimodal model capable of processing text, audio, and images in real-time.
+Other notable products include DALL-E for image generation and Sora for video generation.
+Ilya Sutskever, one of the co-founders and Chief Scientist, left the company in May 2024 to start a new venture called Safe Superintelligence (SSI).
+OpenAI remains at the forefront of the AI race, competing directly with companies like Google and Anthropic.

@@ -1,0 +1,14 @@
+Google LLC is an American multinational technology company that specializes in Internet-related services and products.
+It was founded on September 4, 1998, by Larry Page and Sergey Brin while they were PhD students at Stanford University in California.
+Sundar Pichai is the current CEO of Google and its parent company, Alphabet Inc.
+Google's mission is "to organize the world's information and make it universally accessible and useful."
+Google is a leader in AI research through its Google DeepMind division, formed by merging Google Brain and DeepMind in 2023.
+Demis Hassabis serves as the CEO of Google DeepMind.
+Google's flagship AI model is Gemini, which competes directly with OpenAI's GPT-4.
+Gemini is integrated into various Google products, including Search, Gmail, and Google Cloud.
+The company's headquarters, known as the Googleplex, are located in Mountain View, California.
+Google Cloud Platform (GCP) provides infrastructure and tools for developers to build AI applications, competing with Amazon Web Services (AWS) and Microsoft Azure.
+In May 2024, at Google I/O, the company announced "AI Overviews" in Search, using generative AI to summarize complex topics.
+Google also develops the Android mobile operating system, the Chrome web browser, and YouTube, the world's largest video-sharing platform.
+Jeff Dean is a prominent computer scientist and Google Senior Fellow, known for his work on Google's core infrastructure and deep learning.
+Google has made significant investments in hardware, such as the Tensor Processing Unit (TPU), specifically designed for machine learning workloads.

@@ -1,0 +1,14 @@
+Microsoft Corporation is an American multinational technology corporation headquartered in Redmond, Washington.
+It was founded by Bill Gates and Paul Allen on April 4, 1975.
+Satya Nadella is the current CEO of Microsoft, having taken over from Steve Ballmer in 2014.
+Microsoft is one of the world's most valuable companies, known for the Windows operating system, Office productivity suite, and Azure cloud computing platform.
+Under Nadella's leadership, Microsoft has shifted its focus heavily towards AI and cloud computing.
+Microsoft has a strategic partnership with OpenAI, providing the organization with massive compute power on Azure in exchange for early access to its models.
+Microsoft's AI assistant, Copilot, is powered by OpenAI's GPT models and is integrated across Windows 11, Microsoft 365, and GitHub.
+Azure AI Services allow businesses to build their own AI applications using pre-trained models from Microsoft and OpenAI.
+In 2024, Microsoft announced "Copilot+ PCs," a new category of Windows PCs designed for AI with dedicated Neural Processing Units (NPUs).
+Kevin Scott serves as Microsoft's Chief Technology Officer (CTO) and has been instrumental in the OpenAI partnership.
+Microsoft also owns GitHub, LinkedIn, and the Xbox gaming brand.
+The company is competing with Google and Amazon to dominate the cloud AI market.
+Mustafa Suleyman, a co-founder of DeepMind, joined Microsoft in 2024 as the CEO of Microsoft AI, a new division focused on consumer AI products.
+Microsoft is also developing its own custom AI chips, such as the Azure Maia AI Accelerator, to reduce dependency on NVIDIA.
