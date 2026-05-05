@@ -4,3 +4,8 @@ _bmad-output/
 .agent
 .env
 .agent_cache
+.pytest_cache/
+__pycache__/
+*.pyc
+neo4j/
+reports/

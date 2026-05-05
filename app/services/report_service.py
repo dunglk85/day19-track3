@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 class ReportService:
     def __init__(self):
-        self.reports_dir = "_bmad-output/reports"
+        self.reports_dir = "reports"
         os.makedirs(self.reports_dir, exist_ok=True)
 
     async def get_graph_mermaid(self, limit: int = 25) -> str:

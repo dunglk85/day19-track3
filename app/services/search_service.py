@@ -23,7 +23,7 @@ class SearchService:
         self.vector_index_name = "chunk_vector_index"
         
         # Graph Retrieval Configuration
-        self.embedder = OpenAIEmbeddings(model=settings.EMBEDDING_MODEL)
+        self.embedder = OpenAIEmbeddings(api_key=settings.OPENAI_API_KEY, model=settings.EMBEDDING_MODEL)
         self.retrieval_query = """
         MATCH (node)-[:MENTIONS]->(e)
         OPTIONAL MATCH (e)-[r]-(neighbor)
