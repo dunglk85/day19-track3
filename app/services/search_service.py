@@ -7,6 +7,7 @@ from app.services.embedding_service import embedding_service
 from app.services.metrics_service import metrics_tracker
 from app.models.schemas import QueryRequest, QueryResponse, SearchMeta
 import time
+import asyncio
 from tenacity import retry, stop_after_attempt, wait_exponential
 from neo4j_graphrag.retrievers import VectorCypherRetriever
 from neo4j_graphrag.embeddings.openai import OpenAIEmbeddings
@@ -41,10 +42,7 @@ class SearchService:
             )
         return self._graph_retriever
 
-    async def perform_vector_search(self, request: QueryRequest) -> QueryResponse:
-        """Performs a standard Vector-only RAG search."""
-        start_time = time.perf_counter()
-        
+    async def _get_vector_context(self, request: QueryRequest) -> List[str]:
         # 1. Generate query embedding
         query_vector = self.embedding_service.get_embeddings([request.query])[0]
         
@@ -55,7 +53,29 @@ class SearchService:
             top_k=request.top_k
         )
         
-        context_chunks = [res["text"] for res in search_results]
+        return [res["text"] for res in search_results]
+
+    async def _get_graph_context(self, request: QueryRequest) -> List[str]:
+        with metrics_tracker.track("graph_retrieval", model_name="neo4j-graphrag") as metrics:
+            try:
+                # Limit top_k to prevent DB overload
+                safe_top_k = min(request.top_k, 20)
+                
+                # search() is synchronous in current neo4j-graphrag
+                search_results = self.graph_retriever.search(
+                    query_text=request.query,
+                    top_k=safe_top_k
+                )
+                return [item.content for item in search_results.items if item.content]
+            except Exception as e:
+                logger.error(f"Graph retrieval failed: {str(e)}")
+                return []
+
+    async def perform_vector_search(self, request: QueryRequest) -> QueryResponse:
+        """Performs a standard Vector-only RAG search."""
+        start_time = time.perf_counter()
+        
+        context_chunks = await self._get_vector_context(request)
         
         # 3. Guard against context overflow (simple character limit for now)
         # 128k context is approx 500k characters. Let's limit to 400k.
@@ -126,26 +146,7 @@ Ngữ cảnh:
         """
         start_time = time.perf_counter()
         
-        with metrics_tracker.track("graph_retrieval", model_name="neo4j-graphrag") as metrics:
-            try:
-                # Limit top_k to prevent DB overload
-                safe_top_k = min(request.top_k, 20)
-                
-                # search() is synchronous in current neo4j-graphrag
-                search_results = self.graph_retriever.search(
-                    query_text=request.query,
-                    top_k=safe_top_k
-                )
-            except Exception as e:
-                logger.error(f"Graph retrieval failed: {str(e)}")
-                raise e
-
-        # Format graph context into readable facts
-        graph_facts = []
-        for item in search_results.items:
-            # content is the string representation of the Cypher return record
-            if item.content:
-                graph_facts.append(item.content)
+        graph_facts = await self._get_graph_context(request)
             
         if not graph_facts:
             return QueryResponse(
@@ -166,6 +167,53 @@ Câu hỏi: {request.query}
 Trả lời:"""
 
         return await self._generate_answer_with_retry(prompt, request.query, graph_facts, start_time)
+
+    async def perform_hybrid_search(self, request: QueryRequest) -> QueryResponse:
+        """
+        Synthesizes an answer using both Vector (Semantic) and Graph (Structural) context.
+        """
+        start_time = time.perf_counter()
+        
+        # 1. Fetch both contexts in parallel
+        vector_context, graph_context = await asyncio.gather(
+            self._get_vector_context(request),
+            self._get_graph_context(request)
+        )
+        
+        if not vector_context and not graph_context:
+            return QueryResponse(
+                answer="Không tìm thấy bất kỳ thông tin nào (văn bản hay đồ thị) để trả lời câu hỏi này.",
+                context=[],
+                meta=SearchMeta(tokens={"total": 0, "prompt": 0, "completion": 0}, latency_ms=round((time.perf_counter() - start_time) * 1000, 2))
+            )
+        
+        # 2. Context Guard - Limit total length
+        max_chars = 400000
+        vector_text = ""
+        for chunk in vector_context:
+            if len(vector_text) + len(chunk) < max_chars // 2: # Give vector half space
+                vector_text += chunk + "\n\n"
+        
+        graph_text = ""
+        for fact in graph_context:
+            if len(graph_text) + len(fact) < max_chars // 2: # Give graph half space
+                graph_text += fact + "\n"
+        
+        # 3. Hybrid Prompt Design
+        prompt = f"""Bạn là một trợ lý AI thông minh chuyên phân tích dữ liệu công ty công nghệ. 
+Hãy tổng hợp câu trả lời từ hai nguồn ngữ cảnh dưới đây. Ưu tiên sự chính xác và kết nối các thực thể từ đồ thị tri thức.
+
+[NGỮ CẢNH VĂN BẢN (VECTOR)]:
+{vector_text}
+
+[MỐI QUAN HỆ ĐỒ THỊ (GRAPH)]:
+{graph_text}
+
+Dựa trên cả hai nguồn trên, hãy trả lời câu hỏi: {request.query}
+Trả lời:"""
+
+        combined_context = vector_context + graph_context
+        return await self._generate_answer_with_retry(prompt, request.query, combined_context, start_time)
 
 # Singleton instance
 search_service = SearchService()

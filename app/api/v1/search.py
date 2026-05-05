@@ -17,7 +17,7 @@ async def query_rag(request: QueryRequest):
         if request.method == "vector":
             return await search_service.perform_vector_search(request)
         elif request.method == "hybrid":
-            return await search_service.perform_graph_search(request)
+            return await search_service.perform_hybrid_search(request)
         else:
             raise HTTPException(status_code=400, detail=f"Unsupported search method: {request.method}")
     except Exception as e:
